@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiss’Up — Décoration textile upcyclée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+
+<body>
+  <header class="nav">
+    <a href="#" class="brand">
+      <img src="assets/logo.jpeg" alt="Tiss’Up logo" />
+      <div>
+        <strong>Tiss’Up</strong>
+        <span>décoration textile upcyclée</span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#creations">Créations</a>
+        <a href="#fonctionnement">Comment ça marche</a>
+        <a href="#apropos">À propos</a>
+        <a href="#commande">Commander</a>
+      </nav>
+      <a class="nav-cta" href="#commande">Devis gratuit</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+        <svg id="theme-icon" viewBox="0 0 24 24"></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero reveal">
+      <img class="hero-bg" src="assets/hero-banner.png" alt="Intérieur Tiss’Up" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Fait main en Tunisie • Upcycling textile</p>
+        <h1>Donnez une seconde vie à vos tissus.</h1>
+        <p class="hero-text">Tiss’Up transforme vos anciens tissus, vêtements et textiles familiaux en pièces
+          décoratives uniques, personnalisées et durables.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#creations">Découvrir les créations</a>
+          <a class="btn secondary" href="#fonctionnement">Voir le processus</a>
+        </div>
+      </div>
+      <div class="hero-card floating-card">
+        <div class="hero-mini-grid">
+          <img src="assets/product-cushions.png" alt="Coussins" />
+          <img src="assets/product-pouf.png" alt="Pouf" />
+          <img src="assets/product-lampshade.png" alt="Abat-jour" />
+          <img src="assets/product-wall-panel.png" alt="Panneau mural" />
+        </div>
+        <p>Votre tissu → une pièce unique</p>
+      </div>
+    </section>
+
+    <section id="creations" class="section reveal">
+      <div class="section-title">
+        <p class="eyebrow">Nos créations</p>
+        <h2>Des objets décoratifs chargés d’histoire</h2>
+      </div>
+      <div class="cards">
+        <article class="product-card hover-lift">
+          <div class="product-img-wrap"><img class="product-img" src="assets/product-cushions.png"
+              alt="Coussins patchwork" /></div>
+          <h3>Coussins</h3>
+          <p>À partir de 45 TND</p>
+        </article>
+        <article class="product-card hover-lift">
+          <div class="product-img-wrap"><img class="product-img" src="assets/product-pouf.png" alt="Pouf patchwork" />
+          </div>
+          <h3>Poufs</h3>
+          <p>À partir de 120 TND</p>
+        </article>
+        <article class="product-card hover-lift">
+          <div class="product-img-wrap"><img class="product-img" src="assets/product-lampshade.png"
+              alt="Abat-jour patchwork" /></div>
+          <h3>Abat-jours</h3>
+          <p>À partir de 70 TND</p>
+        </article>
+        <article class="product-card hover-lift">
+          <div class="product-img-wrap"><img class="product-img" src="assets/product-wall-panel.png"
+              alt="Panneaux muraux" /></div>
+          <h3>Panneaux muraux</h3>
+          <p>À partir de 90 TND</p>
+        </article>
+        <article class="product-card hover-lift">
+          <div class="product-img-wrap"><img class="product-img" src="assets/product-table-linen.png"
+              alt="Linge de table" /></div>
+          <h3>Linge de table</h3>
+          <p>À partir de 60 TND</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fonctionnement" class="process reveal">
+      <div class="section-title">
+        <p class="eyebrow">Simple & personnalisé</p>
+        <h2>Comment ça marche ?</h2>
+      </div>
+      <div class="steps">
+        <div class="step hover-lift"><b>01</b>
+          <h3>Vous envoyez vos tissus</h3>
+          <p>Vous choisissez les textiles à transformer et vous nous contactez.</p>
+        </div>
+        <div class="step hover-lift"><b>02</b>
+          <h3>Nous imaginons le design</h3>
+          <p>Nous proposons une création adaptée à vos goûts et à votre tissu.</p>
+        </div>
+        <div class="step hover-lift"><b>03</b>
+          <h3>Nous fabriquons</h3>
+          <p>Chaque pièce est cousue à la main dans notre atelier.</p>
+        </div>
+        <div class="step hover-lift"><b>04</b>
+          <h3>Vous recevez la création</h3>
+          <p>Une pièce unique, durable et prête à décorer votre intérieur.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos" class="about reveal">
+      <div class="about-image-wrap">
+        <img class="about-image" src="assets/product-table-linen.png" alt="Univers Tiss'Up" />
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">À propos</p>
+        <h2>Une marque locale, durable et émotionnelle.</h2>
+        <p>Tiss’Up est un concept tunisien de décoration textile upcyclée. L’objectif est de réduire le gaspillage
+          textile tout en créant des objets décoratifs qui gardent une valeur sentimentale.</p>
+        <div class="values">
+          <span>♻️ Upcyclé</span>
+          <span>🧵 Fait main</span>
+          <span>🌿 Durable</span>
+          <span>✨ Personnalisé</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial reveal">
+      <p>“J’ai transformé les anciens tissus de ma famille en coussins magnifiques. Le résultat est unique et plein de
+        souvenirs.”</p>
+      <span>— Cliente Tiss’Up</span>
+    </section>
+
+    <section id="commande" class="order section reveal">
+      <div class="section-title">
+        <p class="eyebrow">Lancer une commande</p>
+        <h2>Envoyez votre idée de transformation</h2>
+        <p>Formulaire de démonstration pour le projet. Il peut être relié plus tard à Formspree, Netlify Forms ou
+          Firebase.</p>
+      </div>
+      <form name="commande" method="POST" data-netlify="true" class="form">
+        <input type="hidden" name="form-name" value="commande" />
+        <label>Nom complet<input name="nom" placeholder="Votre nom" /></label>
+        <label>Email<input name="email" type="email" placeholder="votre@email.com" /></label>
+        <label>Type de création
+          <select name="creation">
+            <option>Coussin</option>
+            <option>Pouf</option>
+            <option>Abat-jour</option>
+            <option>Panneau mural</option>
+            <option>Linge de table</option>
+            <option>Autre idée</option>
+          </select>
+        </label>
+        <label>Description<textarea name="message"
+            placeholder="Décrivez votre tissu, vos couleurs, votre style..."></textarea></label>
+        <button class="btn primary" type="submit">Envoyer la demande</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand">
+      <img src="assets/logo.jpeg" alt="Tiss’Up logo" />
+      <div><strong>Tiss’Up</strong><span>décoration textile upcyclée</span></div>
+    </div>
+    <p>© 2026 Tiss’Up — Projet de marketing entrepreneurial</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      })
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    const sunIcon = '<path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18.75a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM6.166 17.834a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 10-1.06-1.061l-1.59 1.59zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.166 6.166a.75.75 0 010 1.06l-1.59 1.591a.75.75 0 11-1.061-1.06l1.59-1.591a.75.75 0 011.06 0z" />';
+    const moonIcon = '<path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" />';
+
+    function updateIcon() {
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        themeIcon.innerHTML = sunIcon;
+      } else {
+        themeIcon.innerHTML = moonIcon;
+      }
+    }
+    updateIcon();
+
+    themeToggle.addEventListener('click', () => {
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('theme', targetTheme);
+      updateIcon();
+    });
+  </script>
+</body>
+
+</html>
