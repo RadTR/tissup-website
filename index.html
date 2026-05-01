@@ -27,17 +27,23 @@
       </div>
     </a>
     <div class="nav-right">
-      <nav>
+      <nav class="nav-links">
         <a href="#accueil">Accueil</a>
         <a href="#creations">Créations</a>
         <a href="#fonctionnement">Comment ça marche</a>
         <a href="#apropos">À propos</a>
         <a href="#commande">Commander</a>
+        <a class="nav-cta mobile-only" href="#commande">Devis gratuit</a>
       </nav>
-      <a class="nav-cta" href="#commande">Devis gratuit</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
-        <svg id="theme-icon" viewBox="0 0 24 24"></svg>
-      </button>
+      <div class="nav-actions">
+        <a class="nav-cta desktop-only" href="#commande">Devis gratuit</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+          <svg id="theme-icon" viewBox="0 0 24 24"></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu mobile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -221,6 +227,18 @@
       document.documentElement.setAttribute('data-theme', targetTheme);
       localStorage.setItem('theme', targetTheme);
       updateIcon();
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    // Fermer le menu lors du clic sur un lien
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
     });
   </script>
 </body>
